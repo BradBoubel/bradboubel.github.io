@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://use.typekit.net/buu2blm.css">
+    <style>
+        body {
+            style="background-color: #e4f0d0;"
+        }
+        html {
+            font-family: "amifer", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        button {
+            width: 150px;
+            height: 45px;
+            font-size: 24px;
+            background-color: #A1B5D8;
+            color: #FFFCF7;
+            border-radius: 5px;
+            transition: background-color .5s, color .5s, border .5s;
+            }
+
+        button:hover {
+            background-color: #738290;
+            color: #FFFCF7;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 1%;
+            margin: 3%;
+        }
+
+        .small-text {
+            font-size: 12px;
+        }
+
+        h3 {
+            font-size: 20px;
+            padding: 1%;
+            margin: 1%;
+        }
+
+        h2 {
+            font-size: 24px;
+            background-color: #e4f0d0;
+            padding: 1%;
+            margin: 1%;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+            background-color: #738290;
+            color: #FFFCF7;
+            padding: 1%;
+            margin: 1%;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #738290;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #A1B5D8;
+        }
+        a:visited {
+            color: #C2D8B9;
+        }
+
+    </style>
