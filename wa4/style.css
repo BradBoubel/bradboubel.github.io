@@ -13,19 +13,20 @@
             margin: 2%;
         }
 
-        button { 
-            width: 150px;
-            height: 45px;
+        .button { 
+            width: 250px;
+            height: 65px;
             font-size: 24px;
             background-color: #A1B5D8;
             color: #FFFCF7;
             border-radius: 5px;
+            padding: 10px;
             transition: background-color .5s, color .5s, border .5s;
             }
 
-        button:hover {
+        .button:hover {
             background-color: #738290;
-            color: #FFFCF7;
+            
             cursor: pointer;
         }
 
