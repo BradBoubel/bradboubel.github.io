@@ -161,3 +161,19 @@
         margin-top: 2%;
         margin-bottom: 2rem;
         }
+        .small-color-break {
+        width: 55%;
+        height: 10px;
+        background-color: #77AF9C;
+        border-radius: 15px;
+        margin-top: 2%;
+        margin-bottom: 2rem;
+        }
+        .smaller-color-break {
+        width: 35%;
+        height: 10px;
+        background-color: #77AF9C;
+        border-radius: 15px;
+        margin-top: 2%;
+        margin-bottom: 2rem;
+        }
