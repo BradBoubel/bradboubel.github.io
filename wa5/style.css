@@ -117,3 +117,34 @@
             display:block
         }
     }
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    p {
+        font-size: 20px;
+        max-width: 800px;
+        text-align: center;
+        margin-bottom: 50px;
+        line-height: 1.6;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    footer {
+        background-color: #285943;
+        color: #D7FFF1;
+        text-align: center;
+        padding: 1px;
+        position: relative;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
