@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Public Waterfowlers</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rcx4ruu.css">
+    <link rel = "stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand">Colorado Public Waterfowlers</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="wa6home.html">Home</a></li>
+          <li><a href="wa6resources.html">Resources</a></li>
+          <li><a href="wa6dates.html">Dates</a></li>
+          <li><a href="wa6checklist.html">Checklist</a></li>
+        </ul>
+      </nav>
+      
+      <div class="color-bar"></div>
+
+      <h1>What We're All About Here</h1>
+
+      <p>
+        Colorado Public Waterfowlers is a community organization dedicated to the conservation and enjoyment of waterfowl in Colorado. Our mission is to promote 
+        responsible waterfowl hunting, habitat preservation, and education about waterfowl species and their ecosystems. We organize events, workshops, and outings 
+        for members to connect with nature and fellow enthusiasts.We also recognize that getting into public waterfowl hunting on your own can be extremely challenging. 
+        <br><br>
+        That's why we are here—to make the process easier, more accessible, and more rewarding by providing guidance, shared experiences, and a supportive community.
+        <br><br>
+        Whether you're a seasoned hunter or just starting out, Colorado Public Waterfowlers welcomes you to join us in our passion for waterfowl and the great outdoors.
+      </p>
+
+        <footer>
+            <p>© 2025 Colorado Public Waterfowlers. All rights reserved.</p>
+
+      <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        function showMenu() {
+            var shown = navMenu.classList.toggle("show");
+            navMenu.classList.toggle("hide");
+
+            if (shown) {
+                navToggle.setAttribute("aria-expanded", "true");
+                navToggle.style.transform = "rotate(360deg)"
+            }
+            else {
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.style.transform = "rotate(0deg)"
+            }
+        }
+
+        function checkKey(key_code) {
+            if (key_code == 32) {
+                showMenu();
+                console.log("worked");
+            }
+        }
+
+        navToggle.addEventListener('click', showMenu);
+    </script>
+</body>
+</html>

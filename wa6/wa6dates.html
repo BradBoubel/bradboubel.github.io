@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Public Waterfowlers</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rcx4ruu.css">
+    <link rel = "stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand">Colorado Public Waterfowlers</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="wa6home.html">Home</a></li>
+          <li><a href="wa6resources.html">Resources</a></li>
+          <li><a href="wa6dates.html">Dates</a></li>
+          <li><a href="wa6checklist.html">Checklist</a></li>
+        </ul>
+      </nav>
+      
+      <div class="color-bar"></div>
+
+      <br><br>
+      <h2>2025 Colorado Small Game & Waterfowl</h2>
+
+      <p>The Small Game Brochure provides hunters with season dates, bag limits, and regulations for waterfowl, 
+        upland birds, and other small game animals. While it's an essential reference, the varying rules by species 
+        and zone can make it tricky to interpret quickly, so careful review is important before heading into the field.</p>
+
+      <a href="https://cpw.widen.net/s/bklvf2bjmw/colorado-small-game--waterfowl-brochure">See Brochure Here</a>
+
+      <div class="color-break"></div>
+
+      <h1>2025 Season Dates</h1>
+        <p>Here are the key dates for the 2025 Colorado waterfowl hunting seasons:</p>
+        
+        <h2>Northeast Zone</h2>
+        <p>Dates: Oct. 18–Nov. 30; Dec. 11–Jan. 31, 2026
+            <br>
+            Area: East of I-25 and north of I-70
+        </p>
+
+        <div class="small-color-break"></div>
+
+        <h2>Southeast Zone</h2>
+        <p>Dates: Oct. 28–Jan. 31, 2026
+            <br>
+            Area: East of I-25 and south of I-70, and all of El Paso, Pueblo, Huerfano
+            and Las Animas counties.
+        </p>
+
+        <div class="small-color-break"></div>
+
+        <h2>Mountain/Foothills Zone</h2>
+        <p>Dates: Oct. 4–Nov. 30; Dec. 25–Jan. 31, 2026
+            <br>
+            Area: West of I-25 and east of the Continental Divide, except El Paso,
+            Pueblo, Huerfano and Las Animas counties
+        </p>
+
+        <div class="small-color-break"></div>
+        
+        <h2>Western Zone</h2>
+        <p>Dates: Oct. 4–21; Nov. 6–Jan. 31, 2026
+            <br>
+            Area: West of the Continental Divide not included in the Eastern Zone
+        </p>
+
+        <div class="small-color-break"></div>
+
+        <h2>Eastern Zone</h2>
+        <p>Dates: Oct. 4–Jan. 16, 2026
+            <br>
+            Area: Routt, Grand, Summit, Eagle and Pitkin counties, those parts of Sa-
+            guache, San Juan, Hinsdale and Mineral counties west of the Continental
+            Divide, and part of Gunnison Co., except the North Fork of the Gunnison
+            River Valley (GMUs 53, 63 and 521), and the part of Moffat Co. east of
+            the northern intersection of CR 29 with the Moffat-Routt Co. line, south
+            along CR 29 to the intersection of CR 29 with the Moffat-Routt Co. line
+            (Elkhead Reservoir State Park)
+        </p>
+
+        <h2>REMINDER: Be sure to check daily bag limits in the 2025 Small Game Brochure prior to hunting.</h2>
+
+        <footer>
+            <p>© 2025 Colorado Public Waterfowlers. All rights reserved.</p>
+
+      <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        function showMenu() {
+            var shown = navMenu.classList.toggle("show");
+            navMenu.classList.toggle("hide");
+
+            if (shown) {
+                navToggle.setAttribute("aria-expanded", "true");
+                navToggle.style.transform = "rotate(360deg)"
+            }
+            else {
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.style.transform = "rotate(0deg)"
+            }
+        }
+
+        function checkKey(key_code) {
+            if (key_code == 32) {
+                showMenu();
+                console.log("worked");
+            }
+        }
+
+        navToggle.addEventListener('click', showMenu);
+    </script>
+</body>
+</html>
