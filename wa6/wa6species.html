@@ -6,6 +6,21 @@
     <title>Colorado Public Waterfowlers</title>
     <link rel="stylesheet" href="https://use.typekit.net/rcx4ruu.css">
     <link rel = "stylesheet" href="style.css">
+
+    <style>
+        .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                padding-top: 2rem;
+        }
+        .photo-card img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+            object-position: center;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -26,7 +41,55 @@
       
       <div class="color-bar"></div>
 
-
+      <div>
+        <main class="gallery-grid">
+            <div class="photo-card" data-category="Coot">
+                <img src="American Coot.jpg" alt="American Coot">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Blue Winged Teal.jpg" alt="Duck">
+            </div>
+            <div class="photo-card" data-category="Geese">
+                <img src="Cackling Goose.jpg" alt="Cackling Goose">
+            </div>
+            <div class="photo-card featured" data-category="Geese">
+                <img src="Canada Goose.jpg" alt="Canada Goose">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Cinnamon Teal.jpg" alt="Cinnamon Teal">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Gadwall.jpg" alt="Gadwall">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Green Winged Teal.jpg" alt="Green Winged Teal">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Mallard.jpg" alt="Mallard">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Northern Pintail.jpg" alt="Northern Pintail">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Northern Shoveler.jpg" alt="Northern Shoveler">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Redhead.jpg" alt="Redhead">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Ruddy Duck.jpg" alt="Ruddy Duck">
+            </div>
+            <div class="photo-card" data-category="Crane">
+                <img src="Sandhill Crane.jpg" alt="Sandhill Crane">
+            </div>
+            <div class="photo-card" data-category="Geese">
+                <img src="Snow Goose.jpg" alt="Snow Goose">
+            </div>
+            <div class="photo-card" data-category="Duck">
+                <img src="Wood Duck.jpg" alt="Wood Duck">
+            </div>
+        </main>
+      </div>
 
 
 
