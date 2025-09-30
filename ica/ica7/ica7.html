@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Public Waterfowlers</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rcx4ruu.css">
+    <link rel = "stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: #D7FFF1;
+            color: #285943;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .light {
+            background-color: #D7FFF1;
+            color: #285943;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .dark {
+            background-color: #285943;
+            color: #D7FFF1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        html {
+                font-family: "amifer", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+        }
+        .color-bar {
+            width: 100%;
+            height: 50px;
+            background-color: #285943;
+        }
+        .color-break {
+            width: 75%;
+            height: 20px;
+            background-color: #77AF9C;
+            border-radius: 15px;
+            margin-top: 2%;
+            margin-bottom: 2rem;
+        }
+        .small-color-break {
+            width: 55%;
+            height: 10px;
+            background-color: #77AF9C;
+            border-radius: 15px;
+            margin-top: 2%;
+            margin-bottom: 2rem;
+        }
+        .checklist-grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1rem;
+                padding-top: 2rem;
+        }
+        .checklist-section {
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            text-align: left;
+        }
+        footer {
+            background-color: #285943;
+            color: #D7FFF1;
+            text-align: center;
+            padding: 1px;
+            position: relative;
+            width: 100%;
+            margin-top: 2%;
+            margin-bottom: 0px;
+        }
+
+        @media (min-width: 768px){
+            .checklist-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1000px){
+            .checklist-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+        
+</head>
+
+<body>
+    <button class="theme" id="">Click Me</button>
+    <div class="color-bar"></div>
+
+    <h1>Colorado Waterfowl Hunting Starter Checklist</h1>
+
+    <div class="small-color-break"></div>
+
+    <h2>Heres the bottom line up front</h2>
+    <p>
+        We know gear can get expensive, so here's what you actually need to get started: a hunting license, a shotgun 
+        with non-toxic ammo, warm waterproof clothing, waders or boots, and basic field gear like decoys and calls. 
+        You don't need every gadget to enjoy the hunt. Start simple and build your kit as you go.
+    </p>
+
+    <div class="color-break"></div>
+
+    <div class="checklist-grid">
+        <div class="checklist-section">
+            <h2>Hunting License & Stamps:</h2>
+            <ul>
+                <li>Colorado Small Game License (includes waterfowl)</li>
+                <li>Federal Duck Stamp</li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+        <h2>Hunting Gear:</h2>
+            <ul>
+                <li>Shotgun (12 or 20 gauge)</li>
+                <li>Ammunition (non-toxic/steel shot)</li>
+                <li>Waterproof waders or boots</li>
+                <li>Camouflage clothing (weather appropriate)</li>
+                <li>Hunting vest or pack</li>
+            </ul>
+        </div>
+    
+        <div class="checklist-section">
+        <h2>Field Equipment:</h2>
+            <ul>
+                <li>Decoys</li>
+                <li>Duck/goose calls</li>
+                <li>Blinds or camouflage gear</li>
+                <li>Decoy anchors/weights</li>
+            </ul>
+        </div>
+    
+        <div class="checklist-section">
+            <h2>Safety & Navigation:</h2>
+            <ul>
+                <li>Map or GPS/OnX</li>
+                <li>Cell phone or communication device</li>
+                <li>First aid kit</li>
+            </ul>
+        </div>
+    
+        <div class="checklist-section">
+            <h2>Other Essentials:</h2>
+            <ul>
+                <li>Game bags or cooler for harvested birds</li>
+                <li>License/permit holder</li>
+                <li>Snacks/water for long days in the field</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <footer>
+    <p>© 2025 Colorado Public Waterfowlers. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        let bnt = document.querySelector('theme').addEventListener('click', theme);
+        
+        function theme() {
+            console.log("theme works");
+            setTheme("light")
+        }
+        // Save user's theme choice
+        function setTheme(theme) {
+            let inTheme = theme;
+            if (inTheme == 'dark') {
+                theme = 'light'
+            }
+            else {
+                theme = 'dark'
+            }
+
+
+            localStorage.setItem('userTheme', theme);
+            document.body.className = theme;
+        }
+
+        // Load saved theme on page load
+        window.addEventListener('load', function() {
+            const savedTheme = localStorage.getItem('userTheme') || 'light';
+            document.body.className = savedTheme;
+        });
+    </script>
+</body>
+</html>
