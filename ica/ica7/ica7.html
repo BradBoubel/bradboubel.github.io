@@ -23,7 +23,21 @@
             flex-direction: column;
             align-items: center;
         }
-
+        .dark .color-bar {
+            width: 100%;
+            height: 50px;
+            background-color: #77AF9C;
+        }   
+        .dark footer {
+            background-color: #77AF9C;
+            color: #285943;
+            text-align: center;
+            padding: 1px;
+            position: relative;
+            width: 100%;
+            margin-top: 2%;
+            margin-bottom: 0px;
+        }
         html {
                 font-family: "amifer", sans-serif;
                 font-weight: 700;
@@ -75,6 +89,28 @@
             margin-top: 2%;
             margin-bottom: 0px;
         }
+        button {
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            margin: 20px;
+            color: #D7FFF1;
+            background-color: #285943;
+            border: solid 1px #D7FFF1;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color .5s, color .5s, border .5s;
+        }
+        button:hover {
+            background-color: #77AF9C;
+            color: #285943;
+            border: solid 1px #285943;
+        }
+        p {
+            width: 75%;
+            font-size: 18px;
+            line-height: 1.6;
+        }
 
         @media (min-width: 768px){
             .checklist-grid {
@@ -91,7 +127,9 @@
 </head>
 
 <body>
-    <button class="theme" id="">Click Me</button>
+
+    <h1>Colorado Public Waterfowlers</h1>
+
     <div class="color-bar"></div>
 
     <h1>Colorado Waterfowl Hunting Starter Checklist</h1>
@@ -157,35 +195,33 @@
     </div>
 
 
-
+    <button id="theme">Toggle Light/Dark Theme</button>
     <footer>
     <p>© 2025 Colorado Public Waterfowlers. All rights reserved.</p>
     </footer>
 
     <script>
 
-        let bnt = document.querySelector('theme').addEventListener('click', theme);
+        let bnt = document.querySelector('#theme').addEventListener('click', theme);
         
         function theme() {
-            console.log("theme works");
-            setTheme("light")
+            const currentTheme = document.body.className || 'light';
+            setTheme(currentTheme)
         }
-        // Save user's theme choice
+
         function setTheme(theme) {
             let inTheme = theme;
             if (inTheme == 'dark') {
-                theme = 'light'
+                theme = 'light';
             }
             else {
-                theme = 'dark'
+                theme = 'dark';
             }
-
 
             localStorage.setItem('userTheme', theme);
             document.body.className = theme;
         }
 
-        // Load saved theme on page load
         window.addEventListener('load', function() {
             const savedTheme = localStorage.getItem('userTheme') || 'light';
             document.body.className = savedTheme;
