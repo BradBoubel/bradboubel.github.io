@@ -43,56 +43,134 @@
         <div class="checklist-section">
             <h2>Hunting License & Stamps:</h2>
             <ul>
-                <li>Colorado Small Game License (includes waterfowl)</li>
-                <li>Federal Duck Stamp</li>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="small-game-license">
+                    <span class="checkmark"></span>
+                    Colorado Small Game License (includes waterfowl)
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="federal-duck-stamp">
+                    <span class="checkmark"></span>
+                    Federal Duck Stamp
+                </label>
             </ul>
         </div>
 
         <div class="checklist-section">
         <h2>Hunting Gear:</h2>
             <ul>
-                <li>Shotgun (12 or 20 gauge)</li>
-                <li>Ammunition (non-toxic/steel shot)</li>
-                <li>Waterproof waders or boots</li>
-                <li>Camouflage clothing (weather appropriate)</li>
-                <li>Hunting vest or pack</li>
+                
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="shotgun">
+                    <span class="checkmark"></span>
+                    Shotgun (12 or 20 gauge recommended)
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="ammo">
+                    <span class="checkmark"></span>
+                    Ammunition (non-toxic/steel shot)
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="waders">
+                    <span class="checkmark"></span>
+                    Waterproof waders or boots
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="clothing">
+                    <span class="checkmark"></span>
+                    Camouflage clothing (weather appropriate)
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="hunting-vest">
+                    <span class="checkmark"></span>
+                    Hunting vest or pack
+                </label>
             </ul>
         </div>
     
         <div class="checklist-section">
         <h2>Field Equipment:</h2>
             <ul>
-                <li>Decoys</li>
-                <li>Duck/goose calls</li>
-                <li>Blinds or camouflage gear</li>
-                <li>Decoy anchors/weights</li>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="decoys">
+                    <span class="checkmark"></span>
+                    Decoys
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="calls">
+                    <span class="checkmark"></span>
+                    Duck/goose calls
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="blinds">
+                    <span class="checkmark"></span>
+                    Blinds or camouflage gear
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="decoy-anchors">
+                    <span class="checkmark"></span>
+                    Decoy anchors/weights
+                </label>
             </ul>
         </div>
     
         <div class="checklist-section">
             <h2>Safety & Navigation:</h2>
             <ul>
-                <li>Map or GPS/OnX</li>
-                <li>Cell phone or communication device</li>
-                <li>First aid kit</li>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="map-gps">
+                    <span class="checkmark"></span>
+                    Map or GPS/OnX
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="first-aid-kit">
+                    <span class="checkmark"></span>
+                    First aid kit
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="phone">
+                    <span class="checkmark"></span>
+                    Cell phone or communication device
+                </label>
             </ul>
         </div>
     
         <div class="checklist-section">
             <h2>Other Essentials:</h2>
             <ul>
-                <li>Game bags or cooler for harvested birds</li>
-                <li>License/permit holder</li>
-                <li>Snacks/water for long days in the field</li>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="game-bags">
+                    <span class="checkmark"></span>
+                    Game bags or cooler for harvested birds
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="license-holder">
+                    <span class="checkmark"></span>
+                    License/permit holder
+                </label>
+                <label class="check-label">
+                    <input type="checkbox" class="check-item" data-id="snacks-water">
+                    <span class="checkmark"></span>
+                    Snacks/water for long days in the field
+                </label>
             </ul>
         </div>
     </div>
+
+    <button id="clear-data" class="species-button">Reset Checklist</button>
+
+    <p>
+        Your checklist data is only saved locally in your browser and never shared. You can clear it anytime with the Reset Checklist button.
+    </p>
 
 
 
     <footer>
     <p>© 2025 Colorado Public Waterfowlers. All rights reserved.</p>
     </footer>
+
+
+
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
@@ -119,6 +197,24 @@
         }
 
         navToggle.addEventListener('click', showMenu);
+
+
+
+        document.querySelectorAll(".check-item").forEach(checkbox => {
+            const saved = localStorage.getItem(checkbox.dataset.id);
+            if (saved === "true") {
+                checkbox.checked = true;
+            }
+        
+            checkbox.addEventListener("change", () => {
+                localStorage.setItem(checkbox.dataset.id, checkbox.checked.toString());
+            });
+        });
+
+        document.getElementById("clear-data").addEventListener("click", () => {
+            localStorage.clear();
+            location.reload();
+        });
     </script>
 </body>
 </html>

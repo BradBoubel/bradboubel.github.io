@@ -153,6 +153,102 @@
 
 
 
+    .species-grid {
+        grid-template-areas:
+            "header"
+            "nav"
+            "photo"
+        ;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 4rem;
+    }
+    .species-photo {
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        text-align: center;
+    }
+    .species-photo img {
+        max-width: 100%;
+        height: auto;
+        margin: 2%;
+    }
+    .species-grid-header {
+        grid-area: header;
+        text-align: center;
+    }
+    .filter-nav {
+        grid-area: nav;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .species-button {
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px;
+        margin: 10px;
+        color: #D7FFF1;
+        background-color: #285943;
+        border: solid 1px #D7FFF1;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color .5s, color .5s, border .5s;
+    }
+    .species-button:hover {
+        background-color: #77AF9C;
+        color: white;
+        border: solid 1px gray;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .species-button.active {
+        background-color: #77AF9C;
+        color: #285943;
+        border: solid 1px #285943;
+    }
+
+
+
+    .check-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .check-item {
+        display: none;
+    }
+    .checkmark {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #285943;
+        border-radius: 5px;
+        margin-right: 10px;
+        background-color: #D7FFF1;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    .check-item:checked + .checkmark {
+        background-color: #285943;
+        border-color: #285943;
+    }
+    .check-item:checked + .checkmark::after {
+        content: "X";
+        color: #D7FFF1;
+        font-size: 14px;
+        position: absolute;
+    }
+
+
+
     @media (max-width : 450px) {
         .main-nav {
             justify-content: space-between;
@@ -255,5 +351,13 @@
             width: 100%;
             height: 40px;
             background-color: #285943;
+        }
+    }
+
+
+
+    @media (min-width: 768px){
+        .species-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
     }
