@@ -246,6 +246,9 @@
         font-size: 14px;
         position: absolute;
     }
+    .checklist-section li {
+        list-style: none;
+    }
 
 
 
