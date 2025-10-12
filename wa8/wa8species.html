@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Public Waterfowlers</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rcx4ruu.css">
+    <link rel = "stylesheet" href="wa8style.css">
+
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand">Colorado Public Waterfowlers</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="wa8home.html">Home</a></li>
+            <li><a href="wa8resources.html">Resources</a></li>
+            <li><a href="wa8dates.html">Dates</a></li>
+            <li><a href="wa8checklist.html">Checklist</a></li>
+        </ul>
+    </nav>
+      
+    <div class="color-bar"></div>
+
+    <div class="species-grid-header">
+        <h1>Waterfowl Species of Colorado</h1>
+
+        <p>
+            The waterfowl shown below represent the species you are most likely to encounter while hunting or observing waterfowl in Colorado. 
+            From familiar ducks like Mallards and Pintails, to geese, cranes, and even the American Coot, these species make up the core 
+            of Colorado's rich waterfowl community.
+        </p>
+    </div>
+
+    <nav class="filter-nav">
+        <button class="species-button">All</button>
+        <button class="species-button">Ducks</button>
+        <button class="species-button">Geese</button>
+        <button class="species-button">Coot</button>
+        <button class="species-button">Crane</button>
+    </nav>
+            
+
+      <div>
+        <main class="species-grid">
+            <div class="species-photo" data-category="coot">
+                <p>American Coot</p>
+                <img src="American-Coot.avif" alt="American Coot">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Blue Winged Teal</p>
+                <img src="Blue-Winged-Teal.avif" alt="Blue Winged Teal">
+            </div>
+            <div class="species-photo" data-category="geese">
+                <p>Cackling Goose</p>
+                <img src="Cackling-Goose.avif" alt="Cackling Goose">
+            </div>
+            <div class="species-photo" data-category="geese">
+                <p>Canada Goose</p>
+                <img src="Canada-Goose.avif" alt="Canada Goose">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Cinnamon Teal</p>
+                <img src="Cinnamon-Teal.avif" alt="Cinnamon Teal">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Gadwall</p>
+                <img src="Gadwall.avif" alt="Gadwall">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Green Winged Teal</p>
+                <img src="Green-Winged-Teal.avif" alt="Green Winged Teal">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Mallard</p>
+                <img src="Mallard.avif" alt="Mallard">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Northern Pintail</p>
+                <img src="Northern-Pintail.avif" alt="Northern Pintail">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Northern Shoveler</p>
+                <img src="Northern-Shoveler.avif" alt="Northern Shoveler">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Redhead</p>
+                <img src="Redhead.avif" alt="Redhead">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Ruddy Duck</p>
+                <img src="Ruddy-Duck.avif" alt="Ruddy Duck">
+            </div>
+            <div class="species-photo" data-category="crane">
+                <p>Sandhill Crane</p>
+                <img src="Sandhill-Crane.avif" alt="Sandhill Crane">
+            </div>
+            <div class="species-photo" data-category="geese">
+                <p>Snow Goose</p>
+                <img src="Snow-Goose.avif" alt="Snow Goose">
+            </div>
+            <div class="species-photo" data-category="ducks">
+                <p>Wood Duck</p>
+                <img src="Wood-Duck.avif" alt="Wood Duck">
+            </div>
+        </main>
+      </div>
+
+
+
+
+    <footer>
+    <p>© 2025 Colorado Public Waterfowlers. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        function showMenu() {
+            var shown = navMenu.classList.toggle("show");
+            navMenu.classList.toggle("hide");
+
+            if (shown) {
+                navToggle.setAttribute("aria-expanded", "true");
+                navToggle.style.transform = "rotate(360deg)"
+            }
+            else {
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.style.transform = "rotate(0deg)"
+            }
+        }
+
+        function checkKey(key_code) {
+            if (key_code == 32) {
+                showMenu();
+                console.log("worked");
+            }
+        }
+
+        navToggle.addEventListener('click', showMenu);
+
+
+
+        const filterButtons = document.querySelectorAll('button');
+        const photoCards = document.querySelectorAll('.species-photo');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const filterValue = event.target.textContent.toLowerCase();
+                filterPhotos(filterValue);
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+            });
+        });
+
+        function filterPhotos(category) {
+            photoCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                }
+                else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
