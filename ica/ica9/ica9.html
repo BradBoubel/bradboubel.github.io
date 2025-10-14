@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-box {
+            display: flex;
+            font-size: 24px;
+            height: 65px;
+            width: 125px;
+            border: 2px black solid;
+            border-radius: 10px;
+            background-color: aquamarine;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: height witdh font-size border;
+            transition-duration: .5s;
+        }
+
+        .btn-box:hover {
+            height: 90px;
+            width: 150px;
+            border: 5px black solid;
+            font-size: 32px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-box">
+        Click Me!
+    </div>
+</body>
+</html>
