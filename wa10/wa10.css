@@ -12,7 +12,7 @@ html {
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: white;
+    background-color: #2E6FAE;
   }
   
   .app {
@@ -88,3 +88,36 @@ html {
       font-size: 18px;
     }
   }
+
+
+
+
+  .quote-container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 30px;
+  gap: 20px;
+}
+
+.trump-img {
+  width: 180px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #fff;
+  border: 3px solid #4A2B0F;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 350px;
+  font-size: 22px;
+  color: black;
+  line-height: 1.4;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
