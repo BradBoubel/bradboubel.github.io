@@ -34,16 +34,35 @@ html {
     border-bottom: 1px solid #ebebeb;
   }
   
-  .quotes {
-    padding: 20px 50px;
-    min-height: 200px;
+  .quote-box {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 30px;
+    gap: 20px;
   }
-  
-  .quote-text {
-    padding-bottom: 20px;
-    font-size: 25px;
+
+  .picture {
+    width: 180px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+  }
+
+  .quote {
+    position: relative;
+    background: #fff;
+    border: 3px solid #4A2B0F;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 350px;
+    font-size: 22px;
     color: black;
+    line-height: 1.4;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   }
+
   
   .controls {
     width: 100%;
@@ -64,20 +83,14 @@ html {
   }
   
   .new-quote {
-    background-color: red;
+    background-color: #2E6FAE;
     margin-bottom: 15px;
     transition-property: background-color;
     transition-duration: 0.3s;
   }
   
   .new-quote:hover {
-    background-color: blue;
-  }
-  
-  .new-quote:disabled {
-    background-color: #cccccc;
-    color: #666666;
-    cursor: not-allowed;
+    background-color: red;
   }
   
   @media screen and (max-width: 600px) {
@@ -88,36 +101,3 @@ html {
       font-size: 18px;
     }
   }
-
-
-
-
-  .quote-container {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 30px;
-  gap: 20px;
-}
-
-.trump-img {
-  width: 180px;
-  height: auto;
-  border-radius: 5px;
-  object-fit: contain;
-}
-
-.speech-bubble {
-  position: relative;
-  background: #fff;
-  border: 3px solid #4A2B0F;
-  border-radius: 15px;
-  padding: 20px;
-  max-width: 350px;
-  font-size: 22px;
-  color: black;
-  line-height: 1.4;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
