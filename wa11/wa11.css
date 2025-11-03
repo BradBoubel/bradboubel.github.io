@@ -1,0 +1,131 @@
+body {
+    background-color: #626C66;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0%;
+
+}
+
+html {
+    font-family: "amifer", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.main-nav {
+    width: 100%;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav-brand {
+    font-size: 32px;
+    font-weight: bold;
+    color: #E1CA96;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    color: #626C66;
+    background-color: #E1CA96;
+    border: 1px solid #918B76;
+    border-radius: 10px;
+    transition: background-color .3s, color .3s, border .3s;
+}
+
+.nav-menu a:hover {
+    background-color: #918B76;
+    color: #E1CA96;
+    border: solid 1px gray;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.color-bar {
+    position: relative;
+    width: 99%;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    background-color: #ACA885;
+    color: #434A42;
+    align-items: center;
+    justify-content: left;
+    text-indent: 100px;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    background-color: #ACA885;
+    color: #434A42;
+    text-align: center;
+    width: 99%;
+    border-radius: 10px;
+    margin-top: auto;
+    align-items: center;
+    justify-content: left;
+    text-indent: 20px;
+
+}
+
+
+
+
+@media (min-width: 450px) and (max-width: 800px) {
+    .nav-brand {
+        font-size: 26px;
+    }
+    .nav-menu a {
+        font-size: 16px;
+        padding: 6px 10px;
+        border-radius: 10px;
+    }
+    .color-bar {
+        height: 30px;
+    }
+    .checklist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width : 1200px) {
+    .nav-brand {
+        font-size: 42px;
+        font-weight: bold;
+    }
+    .nav-menu a {
+        font-size: 20px;
+        padding: 10px 14px;
+    }
+    .color-bar {
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px){
+    
+}
