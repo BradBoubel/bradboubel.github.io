@@ -5,13 +5,19 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0%;
-
 }
 
 html {
     font-family: "amifer", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+
+
+h2 {
+    color: #434A42;
+    font-size: 36px;
 }
 
 .main-nav {
@@ -50,6 +56,7 @@ html {
     border: 1px solid #918B76;
     border-radius: 10px;
     transition: background-color .3s, color .3s, border .3s;
+    box-shadow: black 2px 2px 8px;
 }
 
 .nav-menu a:hover {
@@ -75,6 +82,44 @@ html {
     align-items: center;
     justify-content: left;
     text-indent: 100px;
+    box-shadow: black 2px 2px 8px;
+}
+
+.weather-container {
+    background-color: #E1CA96;
+    color: #434A42;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: black 2px 2px 8px;
+
+}
+
+.city-input { 
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #918B76;
+}
+
+#get-weather-btn {
+    padding: 8px 12px;
+    font-size: large;
+    border-radius: 5px;
+    border: 1px solid #626C66;
+    background-color: #918B76;
+    color: #E1CA96;
+    cursor: pointer;
+    transition: color .3s, background-color .3s;
+    box-shadow: gray 2px 2px 2px;
+}
+
+#get-weather-btn:hover {
+    background-color: #ACA885;
+    color: black;
 }
 
 footer {
@@ -89,7 +134,7 @@ footer {
     align-items: center;
     justify-content: left;
     text-indent: 20px;
-
+    box-shadow: black 2px 2px 8px;
 }
 
 
