@@ -113,8 +113,8 @@ h2 {
     font-size: large;
     border-radius: 5px;
     border: 1px solid #626C66;
-    background-color: black;
-    color: #E1CA96;
+    background-color: #918B76;
+    color: black;
     cursor: pointer;
     transition: color .3s, background-color .3s;
     box-shadow: gray 2px 2px 2px;
