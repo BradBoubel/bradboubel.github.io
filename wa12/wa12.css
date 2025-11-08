@@ -1,0 +1,185 @@
+body {
+    background-color: #626C66;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0%;
+}
+
+html {
+    font-family: "amifer", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #E1CA96;
+    margin: 0%;
+}
+
+h2 {
+    color: #434A42;
+    font-size: 36px;
+}
+
+.main-nav {
+    width: 100%;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav-brand {
+    padding: 0%;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    color: black;
+    background-color: #E1CA96;
+    border: 1px solid #918B76;
+    border-radius: 10px;
+    transition: background-color .3s, color .3s, border .3s;
+    box-shadow: black 2px 2px 8px;
+}
+
+.nav-menu a:hover {
+    background-color: #918B76;
+    color: #E1CA96;
+    border: solid 1px gray;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.color-bar {
+    position: relative;
+    width: 99%;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    background-color: #ACA885;
+    color: black;
+    align-items: center;
+    justify-content: left;
+    text-indent: 100px;
+    box-shadow: black 2px 2px 8px;
+}
+
+.weather-container {
+    background-color: #E1CA96;
+    color: #434A42;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: black 2px 2px 8px;
+
+}
+
+.city-input { 
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #918B76;
+}
+
+#get-weather-btn {
+    padding: 8px 12px;
+    font-size: large;
+    border-radius: 5px;
+    border: 1px solid #626C66;
+    background-color: #626C66;
+    color: white;
+    cursor: pointer;
+    transition: color .3s, background-color .3s;
+    box-shadow: gray 2px 2px 2px;
+}
+
+#get-weather-btn:hover {
+    background-color: #ACA885;
+    color: black;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    background-color: #ACA885;
+    color: black;
+    text-align: center;
+    width: 99%;
+    border-radius: 10px;
+    margin-top: auto;
+    align-items: center;
+    justify-content: left;
+    text-indent: 20px;
+    box-shadow: black 2px 2px 8px;
+}
+
+.privacy-statement {
+    font-size: 12px;
+    color: #434A42;
+    margin-top: 10px;
+}
+
+
+
+
+@media (min-width: 450px) and (max-width: 800px) {
+    .nav-brand {
+        font-size: 26px;
+    }
+    .nav-menu a {
+        font-size: 16px;
+        padding: 6px 10px;
+        border-radius: 10px;
+    }
+    .color-bar {
+        height: 30px;
+    }
+    .checklist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width : 1200px) {
+    .nav-brand {
+        font-size: 42px;
+        font-weight: bold;
+    }
+    .nav-menu a {
+        font-size: 20px;
+        padding: 10px 14px;
+    }
+    .color-bar {
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px){
+    
+}
