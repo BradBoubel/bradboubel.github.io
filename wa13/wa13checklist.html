@@ -5,42 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colorado Public Waterfowlers</title>
     <link rel="stylesheet" href="https://use.typekit.net/rcx4ruu.css">
-    <link rel = "stylesheet" href="wa8style.css">      
+    <link rel = "stylesheet" href="wa13.css">      
 </head>
 
 <body>
     <nav class="main-nav">
-        <div class="nav-brand">Colorado Public Waterfowlers</div>
+        <div class="nav-brand">
+            <h1>Water Fourm</h1>
+        </div>
         <button class="nav-toggle" aria-label="Toggle navigation menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <ul class="nav-menu">
-          <li><a href="wa8home.html">Home</a></li>
-          <li><a href="wa8resources.html">Resources</a></li>
-          <li><a href="wa8dates.html">Dates</a></li>
-          <li><a href="wa8checklist.html">Checklist</a></li>
+          <li><a href="wa13home.html">Home</a></li>
+          <li><a href="wa13checklist.html">Checklist</a></li>
         </ul>
     </nav>
       
-    <div class="color-bar"></div>
+    <div class="color-bar">Built for Hunters by Hunters</div>
 
-    <h1>Colorado Waterfowl Hunting Starter Checklist</h1>
 
-    <div class="small-color-break"></div>
+    <div class="container2">
+        <h2>Colorado Waterfowl Hunting Starter Checklist</h2>
+    </div>
 
-    <h2>Heres the bottom line up front</h2>
-    <p>
-        We know gear can get expensive, so here's what you actually need to get started: a hunting license, a shotgun 
-        with non-toxic ammo, warm waterproof clothing, waders or boots, and basic field gear like decoys and calls. 
-        You don't need every gadget to enjoy the hunt. Start simple and build your kit as you go.
-    </p>
+    <div class="container2">
+        <h2>Heres the bottom line up front</h2>
+        <p>
+            We know gear can get expensive, so here's what you actually need to get started: a hunting license, a shotgun 
+            with non-toxic ammo, warm waterproof clothing, waders or boots, and basic field gear like decoys and calls. 
+            You don't need every gadget to enjoy the hunt. Start simple and build your kit as you go.
+        </p>
+    </div>
 
     <div class="color-break"></div>
 
     <div class="checklist-grid">
-        <div class="checklist-section">
+        <div class="container">
             <h2>Hunting License & Stamps:</h2>
             <ul>
                 <li>
@@ -58,7 +61,7 @@
             </ul>
         </div>
 
-        <div class="checklist-section">
+        <div class="container">
         <h2>Hunting Gear:</h2>
             <ul>
                 <li>
@@ -91,7 +94,7 @@
             </ul>
         </div>
     
-        <div class="checklist-section">
+        <div class="container">
         <h2>Field Equipment:</h2>
             <ul>
                 <li>
@@ -119,7 +122,7 @@
             </ul>
         </div>
     
-        <div class="checklist-section">
+        <div class="container">
             <h2>Safety & Navigation:</h2>
             <ul>
                 <li>
@@ -142,7 +145,7 @@
             </ul>
         </div>
     
-        <div class="checklist-section">
+        <div class="container">
             <h2>Other Essentials:</h2>
             <ul>
                 <li>
@@ -166,11 +169,13 @@
         </div>
     </div>
 
-    <button id="clear-data" class="species-button">Reset Checklist</button>
+    <button id="clear-data">Reset Checklist</button>
 
-    <p>
-        Privacy Statement: Your checklist data is only saved locally in your browser and never shared. You can clear it anytime with the Reset Checklist button.
-    </p>
+    <div class="container2">
+        <p>
+            Privacy Statement: Your checklist data is only saved locally in your browser and never shared. You can clear it anytime with the Reset Checklist button.
+        </p>
+    </div>
 
 
 
@@ -206,9 +211,6 @@
         }
 
         navToggle.addEventListener('click', showMenu);
-
-
-
         document.querySelectorAll(".check-item").forEach(checkbox => {
             const saved = localStorage.getItem(checkbox.dataset.id);
             if (saved === "true") {
